@@ -1,11 +1,12 @@
 import './App.css';
+import mockdata from './mock-data.json';
 
 function App() {
-    return ( <
-        div className = "App" >
-
-        <
-        /div>
+    console.log(mockdata);
+    return ( 
+    <div className = "App" >
+        
+        </div>
     );
 }
 
