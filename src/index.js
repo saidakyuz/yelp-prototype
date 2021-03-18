@@ -1,13 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import mockdata from './mock-data.json';
 
+function App() {
+  console.log(mockdata);
+    return (
+      <div className = "App">
+        <Header/>
+        Banner
+        Searchbar
+        CityFilter
 
-ReactDOM.render(
-  <React.StrictMode >
-    <App />
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+        <CardComponent/>
+        <MapComponent/>
+
+        <DetailPage/>
+        Router
+        Landingpage
+        Detailpage
+        Router
+
+        <Footer/>
+      </div>
+    );
+}
+
+export default App;
