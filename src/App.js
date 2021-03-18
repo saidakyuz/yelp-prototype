@@ -5,16 +5,21 @@ function App() {
   console.log(mockdata);
     return (
       <div className = "App">
+        <Header/>
         Banner
         Searchbar
         CityFilter
-        CardComponent
-        MapComponent
 
+        <CardComponent/>
+        <MapComponent/>
+
+        <DetailPage/>
         Router
         Landingpage
         Detailpage
         Router
+
+        <Footer/>
       </div>
     );
 }
