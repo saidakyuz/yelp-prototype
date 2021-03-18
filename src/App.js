@@ -1,11 +1,21 @@
 import './App.css';
+import mockdata from './mock-data.json';
 
 function App() {
-    return ( <
-        div className = "App" >
+  console.log(mockdata);
+    return (
+      <div className = "App">
+        Banner
+        Searchbar
+        CityFilter
+        CardComponent
+        MapComponent
 
-        <
-        /div>
+        Router
+        Landingpage
+        Detailpage
+        Router
+      </div>
     );
 }
 
