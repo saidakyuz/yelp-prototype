@@ -14,6 +14,9 @@ function Header () {
                         src={Logo}
                         />
                     </Link>
+            <div className="headertext">
+               <h1> Check the best restaurants in your city</h1>
+            </div>
             <SearchBar/>
         </Container>
     )

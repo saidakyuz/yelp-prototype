@@ -1,14 +1,106 @@
 .App {
+    font-family:'Roboto',sans-serif;
     text-align: center;
 }
+/* Main Content */
 .leaflet-container {
   width: auto;
   height: 20rem;
 }
-.card-header{
+/* Card */
+.card{
+  margin-bottom: 1rem;
+}
+div.card-header{
   text-align: left;
   font-weight: bold;
+  background-color: #231f20;
+  color: white;
+  opacity: 0.9;
 }
 .card-text{
   text-align: left;
+}
+button.float-right.btn.btn-primary{
+  background-color: transparent;
+  color: #277d3e;
+  border: none;
+}
+button.float-right.btn.btn-primary:focus{
+  box-shadow: transparent;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #277d3e;
+  border: none;
+}
+button.float-right.btn.btn-primary:hover{
+  background-color: transparent;
+  color: #277d3e;
+  text-decoration: underline;
+  border: none;
+}
+/* Header */
+form.searcher{
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.searcher button{
+  color: white;
+  background-color: #9e2525;
+  border: none;
+}
+.searcher button:hover{
+  opacity: 0.9;
+  background-color: #231f20;
+}
+img#logoheader{
+  margin-top: 2rem;
+  width: 8rem;
+}
+
+.form-control:focus{
+  border-color: transparent !important;;
+  box-shadow: 0 0 0 0.2rem rgb(158 37 37 / 25%)!important;
+}
+.headertext h1{
+  margin-top:2rem;
+  font-size: 2rem;
+}
+
+
+/* Footer */
+.footer{
+  background-color: rgb(201, 201, 201);
+  justify-content: center;
+  display: flex;
+}
+img#logoimg{
+  width: 8rem;
+}
+#footerbox{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer ul li{
+  list-style-type: none;
+  text-align: right;
+}
+h5{
+  text-align: left;
+}
+h6{
+  padding: 1rem;
+  background-color: #277d3e;
+  color:white
+}
+.footer a{
+  color:#231f20;
+}
+.footer a:hover{
+  color: #9e2525;
+  text-decoration: none;
 }

@@ -6,33 +6,34 @@ import Logo from "../images/logo.png";
 function Footer(){
 
     return(
-        <Container >
-            <Row className="justify-content-md-center">
+        <Container fluid className="footer justify-content-md-center">
+            <Row className="justify-content-md-center container" id="footerbox">
                 <Col sm>
+                    <h5><a href="#">Partners</a></h5>
+                    <h5><a href="#">Collaborators</a></h5>
+                    <h5><a href="#">About</a></h5>
+                </Col>
+                <Col sm>
+                    
                     <Link className='navbar-brand' to='/'>
                         <img
-                        id="logoimg"
+                        id="logoheader"
                         alt="logoimg"
                         src={Logo}
                         />
                     </Link>
                 </Col>
                 <Col sm>
-                    <h5>Partners</h5>
-                    <h5>Collaborators</h5>
-                    <h5>About</h5>
-                </Col>
-                <Col sm>
                     <ul>
-                        <li>Terms</li>
-                        <li>Privacy</li>
-                        <li>Cookies</li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Policy</a></li>
+                        <li><a href="#">Newsletter</a></li>
                     </ul>
                 </Col>
             </Row>
-            <Row>
-            © 2021 _ Design and built with lot of love :)
-            </Row>
+            
         </Container>
     )
 }
