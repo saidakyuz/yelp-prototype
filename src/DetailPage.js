@@ -3,25 +3,27 @@ import React from "react";
 import { Jumbotron, Container, Form, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import SingleMap from './components/SingleMap.js'
 
 export default function DetailPage({ result }) {
   const { id } = useParams();
   console.log("id From DETAILPAGE", id);
-  let index = 0;
-  const [restaurant, setRestaurant] = useState([]);
 
+  const [restaurant, setRestaurant] = useState([]);
+  const url = `https://protected-scrubland-40709.herokuapp.com/restaurants/`
   useEffect(() => {
     console.log("useEffect called for one restaurant");
-    fetch(`https://protected-scrubland-40709.herokuapp.com/restaurants/${id}`)
+    fetch(url)
       .then((res) => res.json())
-      .then((json) => setRestaurant(json))
+      .then((json) => setRestaurant(json[id]))
       .catch((e) => console.log("Request failed: ", e));
     console.log("RESULT IN DETAILPAGE asdfgggg", restaurant);
-  }, []);
+  }, [id]);
+
 
   return (
     <div className="container">
-      {/* <div className="row m-3">
+      <div className="row m-3">
         <div className="col col-4">
           <div className="row m-1">
             <img
@@ -32,24 +34,23 @@ export default function DetailPage({ result }) {
           <div className="row m-1">
             <Jumbotron>
               <Container>
-                <p>Address: {address}</p>
-                <p>Rating Points: {rPoints}</p>
-                <p>Avarage Price: {rPrice}</p>
+                <p>Address: {restaurant.adress}</p>
+                <p>Rating Points: {restaurant.rating_points}</p>
+                <p>Avarage Price: {restaurant.range_price}</p>
               </Container>
             </Jumbotron>
           </div>
-          <div className="row m-1">I will call the Map component here...</div>
+          <div className="row m-1"><SingleMap value={restaurant}/></div>
         </div>
 
         <div className="col col-8">
           <div className="row m-1">
-            <h2>{name}</h2>
+            <h2>{restaurant.restaurantname}</h2>
           </div>
           <div className="row m-1">
-            <p>{description}</p>
+            <p>{restaurant.description}</p>
           </div>
           <div className="row m-1">
-            previous comments will be called here... Waiting for json
           </div>
           <div className="row m-1">
             <Form>
@@ -74,7 +75,7 @@ export default function DetailPage({ result }) {
             </Form>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
