@@ -1,4 +1,5 @@
-[{
+[
+    {
         "id": 1,
         "restaurant_name": "Eabox",
         "range_price": "€1,25",
@@ -6,7 +7,7 @@
         "tag": "vegan",
         "geodata_lat": -8.7195657,
         "address": "73525 Moulton Way",
-        "description": "Ameliorated optimizing focus group",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         "comment": "harness back-end initiatives",
         "geodata_long": 122.3589285,
         "city": "Berlin"
