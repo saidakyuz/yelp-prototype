@@ -1,22 +1,27 @@
 import React from "react";
-import mockdata from "./mock-data.json";
+// import mockdata from "./mock-data.json";
 import { Jumbotron, Container, Form, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-export default function DetailPage() {
+export default function DetailPage({ result }) {
   const { id } = useParams();
+  console.log("id From DETAILPAGE", id);
+  let index = 0;
+  const [restaurant, setRestaurant] = useState([]);
 
-  const idFake = 1;
-  const photoUrl = ""; // I need photo url data!
-  const description = mockdata[0].description;
-  const name = mockdata[0].restaurant_name;
-  const rPoints = mockdata[0].rating_points;
-  const rPrice = mockdata[0].range_price;
-  const address = mockdata[0].address;
-  const comments = mockdata[0].comment;
+  useEffect(() => {
+    console.log("useEffect called for one restaurant");
+    fetch(`https://protected-scrubland-40709.herokuapp.com/restaurants/${id}`)
+      .then((res) => res.json())
+      .then((json) => setRestaurant(json))
+      .catch((e) => console.log("Request failed: ", e));
+    console.log("RESULT IN DETAILPAGE asdfgggg", restaurant);
+  }, []);
+
   return (
     <div className="container">
-      <div className="row m-3">
+      {/* <div className="row m-3">
         <div className="col col-4">
           <div className="row m-1">
             <img
@@ -69,7 +74,7 @@ export default function DetailPage() {
             </Form>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
