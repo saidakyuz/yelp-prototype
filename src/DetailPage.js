@@ -22,7 +22,7 @@ export default function DetailPage({ result }) {
 
 
   return (
-    <div className="container">
+    <div className="container" id="containerdetail">
       <div className="row m-3">
         <div className="col col-4">
           <div className="row m-1">
@@ -53,7 +53,7 @@ export default function DetailPage({ result }) {
           <div className="row m-1">
           </div>
           <div className="row m-1">
-            <Form>
+            <Form id="detailpgcomment">
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>User Name</Form.Label>
                 <Form.Control type="text" placeholder="Type your name here" />

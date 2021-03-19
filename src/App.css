@@ -45,7 +45,7 @@ form.searcher{
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.searcher button{
+.searcher button, button.btn.btn-primary {
   color: white;
   background-color: #9e2525;
   border: none;
@@ -64,10 +64,21 @@ img#logoheader{
   box-shadow: 0 0 0 0.2rem rgb(158 37 37 / 25%)!important;
 }
 .headertext h1{
+  font-weight: 300;
   margin-top:2rem;
   font-size: 2rem;
 }
-
+/*Detail Page*/
+#detailpgcomment{
+  padding-top: 5rem;
+}
+#containerdetail{
+  padding-top:2rem;
+}
+h2{
+  font-weight: 600;
+  text-decoration: overline;
+}
 
 /* Footer */
 .footer{
