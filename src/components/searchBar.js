@@ -5,10 +5,6 @@ import {useEffect} from 'react';
 
 const SearchBar = (props) => {
     useEffect(async () => {
-       const res = await fetch(data)
-       console.log(res);
-       const data = await res.json();
-       console.log(data)
     }, [])
     return(
         <Container>

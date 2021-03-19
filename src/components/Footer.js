@@ -1,19 +1,19 @@
 import { Container, Col, Row} from "react-bootstrap"
 import {Link} from "react-router-dom"
-import Logo from "../components/images/logo.png";
+import Logo from "../images/logo.png";
 
 
 function Footer(){
-    
+
     return(
         <Container >
             <Row className="justify-content-md-center">
                 <Col sm>
                     <Link className='navbar-brand' to='/'>
-                        <img 
-                        id="logoimg" 
+                        <img
+                        id="logoimg"
                         alt="logoimg"
-                        src={Logo} 
+                        src={Logo}
                         />
                     </Link>
                 </Col>

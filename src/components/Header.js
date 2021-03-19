@@ -1,20 +1,20 @@
-import './App.css';
-import SearchBar from './components/searchBar'
+import '../App.css';
+import SearchBar from './searchBar'
 import { Container } from 'react-bootstrap';
-import Logo from './components/images/logo.png';
+import Logo from '../images/logo.png';
 
 function Header () {
     return(
         <Container className="header">
             <nav>
 
-                <img 
+                <img
                 id="logoimg"
-                alt="logoimg" 
+                alt="logoimg"
                 src={Logo} />
 
             </nav>
-            <SearchBar/>           
+            <SearchBar/>
         </Container>
     )
 }
