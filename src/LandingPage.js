@@ -1,9 +1,11 @@
 import React from "react";
+
 import {Container, Row, Col} from "react-bootstrap";
 import MapComponent from './components/MapComponent';
 import CardComponent from './components/CardComponent';
 import Sticky from 'react-stickynode';
 import './App.css';
+
 
 export default function LandingPage() {
   return (
@@ -11,6 +13,7 @@ export default function LandingPage() {
       {/* <Header/>
         Banner
         Searchbar
+
         CityFilter*/}
 
         <Container>

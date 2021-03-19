@@ -1,7 +1,9 @@
-import './App.css';
-import mockdata from './mock-data.json';
-/*import DetailPage from "./DetailPage";*/
+
+import "./App.css";
+import mockdata from "./mock-data.json";
+import DetailPage from "./DetailPage";
 import LandingPage from "./LandingPage";
+import { Switch, Route } from "react-router-dom";
 
 
 function App() {
@@ -16,17 +18,11 @@ function App() {
         <CardComponent/>
         <MapComponent/> */}
 
-      <LandingPage />
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/restaurants/:id" component={DetailPage} />
+      </Switch>
 
-
-      {/*
-        <DetailPage />
-        Router
-        Landingpage
-        Detailpage
-        Router */}
-
-      {/* <Footer/> */}
     </div>
   );
 }
