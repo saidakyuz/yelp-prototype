@@ -1,11 +1,11 @@
 import React from 'react';
 import mockdata from '../mock-data.json';
 import {Card, Button} from "react-bootstrap";
-
+import ReactStars from "react-rating-stars-component";
+import '../App.css'
 
 
 const CardComponent = () => {
-console.log(mockdata);
   return (
     <div>
     {mockdata.map(res => {
@@ -14,11 +14,17 @@ console.log(mockdata);
         <Card>
           <Card.Header>{res.restaurant_name}</Card.Header>
           <Card.Body>
-            <Card.Title>{res.rating_points}</Card.Title>
+            <Card.Title>
+              <ReactStars {...{
+                size: 30,
+                value: res.rating_points,
+                edit: false
+              }}/>
+              </Card.Title>
             <Card.Text>
               {res.address}
             </Card.Text>
-            <Button variant="primary">More Details</Button>
+            <Button className="float-right" variant="primary">More Details</Button>
           </Card.Body>
         </Card>
         </div>

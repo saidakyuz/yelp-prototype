@@ -1,6 +1,6 @@
 import './App.css';
 import mockdata from './mock-data.json';
-import DetailPage from "./DetailPage";
+/*import DetailPage from "./DetailPage";*/
 import LandingPage from "./LandingPage";
 
 
@@ -17,9 +17,11 @@ function App() {
         <MapComponent/> */}
 
       <LandingPage />
-      <DetailPage />
 
-      {/* Router
+
+      {/*
+        <DetailPage />
+        Router
         Landingpage
         Detailpage
         Router */}
