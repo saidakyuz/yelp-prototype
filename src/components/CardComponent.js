@@ -9,24 +9,24 @@ const CardComponent = ({ result }) => {
   console.log("RESULT IN CARDCOMPONENT", result);
   return (
     <div>
-      {result.map((res) => {
+      {result.map((result) => {
         return (
-          <div key={res.id}>
+          <div key={result.id}>
             <Card>
-              <Card.Header>{res.restaurant_name}</Card.Header>
+              <Card.Header>{result.restaurantname}</Card.Header>
               <Card.Body>
                 <Card.Title>
                   <ReactStars
                     {...{
                       size: 30,
-                      value: res.rating_points,
+                      value: result.rating_points,
                       edit: false,
                     }}
                   />
                 </Card.Title>
-                <Card.Text>{res.address}</Card.Text>
+                <Card.Text>{result.adress}</Card.Text>
                 <Button className="float-right" variant="link">
-                  <Link to={`/restaurants/${res.id}`}>More Details</Link>
+                  <Link to={`/restaurants/${result.id}`}>More Details >></Link>
                 </Button>
               </Card.Body>
             </Card>

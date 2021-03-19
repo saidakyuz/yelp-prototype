@@ -1,35 +1,35 @@
-import React from "react";
+import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import markerCustom from "../images/restaurant.png";
 import { Link } from "react-router-dom";
 
-const MapComponent = ({ result }) => {
-  console.log("RESULT IN MAPCOMPONENET", result);
+const SingleMap = ({ value }) => {
+  console.log("RESULT IN MAPCOMPONENET", value);
   const icon = new Icon({
     iconUrl: markerCustom,
     iconSize: [35, 35],
-  });
+
+});
   return (
     <div>
       <MapContainer center={[52.517949885246125, 13.40569756502596]} zoom={10} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {result.map((result) => (
-          <div key={result.id}>
-            <Marker position={[result.lat, result.long]} icon={icon}>
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+          <div>
+          {value &&
+            <Marker position={[52.517949885246125, 13.40569756502596]} icon={icon}>
               <Popup>
-                <Link to={`/restaurants/${result.id}`}>{result.restaurantname}, {result.adress}</Link>
+                This is text
               </Popup>
-            </Marker>
+            </Marker>}
           </div>
         ))}
       </MapContainer>
     </div>
-  );
-};
+  )
+}
 
-export default MapComponent;
+export default SingleMap
