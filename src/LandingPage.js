@@ -10,12 +10,6 @@ import './App.css';
 export default function LandingPage() {
   return (
     <div>
-      {/* <Header/>
-        Banner
-        Searchbar
-
-        CityFilter*/}
-
         <Container>
           <Row>
             <Col sm={7}><CardComponent/></Col>
@@ -26,8 +20,6 @@ export default function LandingPage() {
             </Col>
           </Row>
         </Container>
-
-      {/* <Footer/> */}
     </div>
   );
 }
